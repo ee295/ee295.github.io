@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Jacob's Page</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -23,6 +24,7 @@
         --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         --email-hover-color: #1e90ff;
         --title-background-color: #ffb3b3;
+        --stack-background-color: #c2f2aa;
         --icon-color: #ff6f61;
         --icon-size: 48px;
         --tagline-color: #e0e0e0;
@@ -89,7 +91,7 @@
       }
 
       #home {
-        background: url("bg.jpg") no-repeat center center/cover;
+        background: url("assets/bg.jpg") no-repeat center center/cover;
         color: #fff;
         height: 80vh;
         display: flex;
@@ -191,6 +193,19 @@
         transform: translate(-50%, -50%);
       }
 
+      #projects .project .stack {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: var(--stack-background-color);
+        padding: 10px 15px;
+        border-radius: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 25%;
+        gap: 3px;
+      }
+
       #projects .project:hover {
         transform: translateY(-5px);
       }
@@ -258,15 +273,26 @@
     </header>
 
     <section id="home" class="section">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Your introduction or tagline goes here.</p>
+      <h1>Jacob's Page</h1>
+      <p>
+        It is my belief that ramen is merely a plot by the illustration industry
+        to increase road usage among the public.
+      </p>
     </section>
 
     <section id="about" class="section">
       <h2>About Me</h2>
       <p>
-        Information about yourself goes here. Describe your skills, experience,
-        and background.
+        Hello, I'm Jacob, a dedicated and self-taught programmer with over a
+        decade of experience in the field. My expertise spans a range of
+        technologies, including Vue.js, Tailwind CSS, Node.js, Firebase, and
+        Python. Over the years, I have developed and contributed to various web
+        applications, showcasing my ability to adapt and thrive in dynamic
+        environments. My journey in technology has also included an internship
+        at a small tech company, where I honed my skills and gained valuable
+        industry experience. In addition to my technical capabilities, I have
+        leveraged tools like ChatGPT and generative AI to enhance productivity
+        and innovation in my projects.
       </p>
     </section>
 
@@ -275,24 +301,39 @@
       <div class="projects-container">
         <div
           class="project"
-          onclick="window.open('https://example.com/project1', '_blank')"
+          onclick="window.open('https://spare.jpy1.me', '_blank')"
         >
-          <div class="title">Project 1</div>
-          <div class="icon"><i class="fas fa-code"></i></div>
+          <div class="title">SpaRe</div>
+          <div class="stack">
+            <img src="./assets/vue_logo.svg" width="30px" height="30px" />
+            <img src="./assets/tailwind_logo.svg" width="30px" height="30px" />
+            <img src="./assets/firebase_logo.svg" width="30px" height="30px" />
+          </div>
+          <div class="icon">
+            <img src="./assets/spare_logo.png" width="96px" height="96px" />
+          </div>
           <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            SpaRe is a Vue.js web application designed for learning. It was
+            conceived as a modern, user-friendly alternative to the popular
+            flashcard app, Anki.
           </div>
         </div>
-        <div
-          class="project"
-          onclick="window.open('https://example.com/project2', '_blank')"
-        >
-          <div class="title">Project 2</div>
-          <div class="icon"><i class="fas fa-paint-brush"></i></div>
+        <div class="project">
+          <div class="title">StuKa</div>
+          <div class="stack">
+            <img src="./assets/vue_logo.svg" width="30px" height="30px" />
+            <img src="./assets/tailwind_logo.svg" width="30px" height="30px" />
+            <img src="./assets/nodejs_logo.svg" width="30px" height="30px" />
+            <img src="./assets/postgres_logo.svg" width="30px" height="30px" />
+            <img src="./assets/firebase_logo.svg" width="30px" height="30px" />
+            <img src="./assets/docker_logo.svg" width="30px" height="30px" />
+          </div>
+          <div class="icon">
+            <img src="./assets/stuka_logo.png" width="96px" height="96px" />
+          </div>
           <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            StuKa is a Vue.js web application designed for learning. Currently
+            in development, it has not yet been released.
           </div>
         </div>
         <!-- ... -->
@@ -304,17 +345,14 @@
       <div class="contact">
         <p>
           Email:
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <a href="mailto:goodsilver99@gmail.com">goodsilver99@gmail.com</a>
         </p>
         <div class="socials">
-          <a href="https://twitter.com" target="_blank"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="https://linkedin.com" target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a href="https://github.com" target="_blank"
+          <a href="https://github.com/ee295" target="_blank"
             ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://x.com/jacobsilver99" target="_blank"
+            ><i class="fab fa-twitter"></i
           ></a>
           <!-- ... -->
         </div>
