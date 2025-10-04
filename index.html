@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacob's Page</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #a3d5ff;
+        --secondary-color: #ffc3a0;
+        --background-color: #f4f4f4;
+        --text-color: #333;
+        --text-light-color: #666;
+        --border-radius: 24px;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --email-hover-color: #1e90ff;
+        --title-background-color: #ffb3b3;
+        --stack-background-color: #c2f2aa;
+        --icon-color: #ff6f61;
+        --icon-size: 48px;
+        --tagline-color: #e0e0e0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--background-color);
+        color: var(--text-color);
+      }
+
+      header {
+        background: transparent;
+        color: var(--text-color);
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: var(--border-radius);
+        background: var(--primary-color);
+        box-shadow: var(--box-shadow);
+        transition: background 0.3s;
+      }
+
+      nav ul li a:hover {
+        background: var(--secondary-color);
+      }
+
+      .section {
+        padding: 120px 20px 60px;
+        text-align: center;
+        border-radius: var(--border-radius);
+        margin: 20px;
+        background: #fff;
+        box-shadow: var(--box-shadow);
+      }
+
+      #home {
+        background: url("assets/bg.jpg") no-repeat center center/cover;
+        color: #fff;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: var(--border-radius);
+        margin: 20px;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+      }
+
+      #home h1 {
+        margin: 20px 0;
+        font-size: 3rem;
+      }
+
+      #home p {
+        font-weight: 400;
+        line-height: 1.6;
+        color: var(--tagline-color);
+      }
+
+      h2,
+      h3 {
+        margin: 20px 0;
+        font-weight: 700;
+      }
+
+      p {
+        font-weight: 400;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: var(--text-light-color);
+      }
+
+      #about p {
+        max-width: 777px;
+        margin: 0 auto;
+      }
+
+      #projects {
+        margin-top: 40px;
+      }
+
+      #projects h2 {
+        margin-bottom: 40px;
+      }
+
+      #projects .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      #projects .project {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        height: 300px;
+        border-radius: var(--border-radius);
+        background: #fff;
+        color: var(--text-color);
+        box-shadow: var(--box-shadow);
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      #projects .project .title {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: var(--title-background-color);
+        padding: 10px 15px;
+        border-radius: 12px;
+        color: var(--text-color);
+        font-weight: 700;
+        font-size: 24px;
+      }
+
+      #projects .project .description {
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        color: #000;
+        font-size: 18px;
+        width: 100%;
+        padding: 0 10px;
+      }
+
+      #projects .project .icon {
+        font-size: var(--icon-size);
+        color: var(--icon-color);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #projects .project .stack {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: var(--stack-background-color);
+        padding: 10px 15px;
+        border-radius: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 25%;
+        gap: 3px;
+      }
+
+      #projects .project:hover {
+        transform: translateY(-5px);
+      }
+
+      .contact {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        font-size: 20px;
+      }
+
+      .contact h2 {
+        margin-bottom: 20px;
+      }
+
+      .contact p {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .contact a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+        padding: 5px 10px;
+        border-radius: var(--border-radius);
+      }
+
+      .contact a:hover {
+        color: var(--email-hover-color);
+      }
+
+      .socials {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .socials a {
+        margin: 0 10px;
+        color: var(--text-color);
+        transition: color 0.3s;
+        font-size: 48px;
+      }
+
+      .socials a:hover {
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="section">
+      <h1>Jacob's Page</h1>
+      <p>
+        It is my belief that ramen is merely a plot by the illustration industry
+        to increase road usage among the public.
+      </p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I'm Jacob, a self-taught web developer with several years of experience.
+        My primary expertise lies in developing with Vue, Tailwind, and Node.js,
+        though I've also worked on some Python projects. I'm a big fan of open
+        source software.
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div
+          class="project"
+          onclick="window.open('https://spare.jpy1.me', '_blank')"
+        >
+          <div class="title">SpaRe</div>
+          <div class="stack">
+            <img src="./assets/vue_logo.svg" width="30px" height="30px" />
+            <img src="./assets/tailwind_logo.svg" width="30px" height="30px" />
+            <img src="./assets/nodejs_logo.svg" width="30px" height="30px" />
+            <img src="./assets/postgres_logo.svg" width="30px" height="30px" />
+            <img src="./assets/firebase_logo.svg" width="30px" height="30px" />
+            <img src="./assets/docker_logo.svg" width="30px" height="30px" />
+          </div>
+          <div class="icon">
+            <img src="./assets/spare_logo.png" width="96px" height="96px" />
+          </div>
+          <div class="description">
+            SpaRe is a Vue.js web application designed for learning. It was
+            conceived as a modern, user-friendly alternative to the popular
+            flashcard app, Anki.
+          </div>
+        </div>
+        <div class="project">
+          <div class="title">StuKa</div>
+          <div class="stack">
+            <img src="./assets/vue_logo.svg" width="30px" height="30px" />
+            <img src="./assets/tailwind_logo.svg" width="30px" height="30px" />
+            <img src="./assets/nodejs_logo.svg" width="30px" height="30px" />
+            <img src="./assets/postgres_logo.svg" width="30px" height="30px" />
+            <img src="./assets/firebase_logo.svg" width="30px" height="30px" />
+            <img src="./assets/docker_logo.svg" width="30px" height="30px" />
+          </div>
+          <div class="icon">
+            <img src="./assets/stuka_logo.png" width="96px" height="96px" />
+          </div>
+          <div class="description">
+            StuKa is a Vue.js web application created for language learning. The
+            development of StuKa is currently suspended for the time being.
+          </div>
+        </div>
+        <div
+          class="project"
+          onclick="window.open('https://pi.jpy1.me', '_blank')"
+        >
+          <div class="title">Pi Trainer</div>
+          <div class="stack">
+            <img src="./assets/vue_logo.svg" width="30px" height="30px" />
+            <img src="./assets/tailwind_logo.svg" width="30px" height="30px" />
+          </div>
+          <div class="icon">
+            <img src="./assets/pi_logo.png" width="96px" height="96px" />
+          </div>
+          <div class="description">
+            Pi Trainer is a Vue.js app made for practicing the digits of pi. It
+            was created to offer the desired functionality and user interface I
+            couldn't find elsewhere.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <div class="contact">
+        <div class="socials">
+          <a href="https://github.com/ee295" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://mastodon.social/@jacob_silver" target="_blank"
+            ><i class="fab fa-mastodon"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
